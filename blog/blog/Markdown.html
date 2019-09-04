@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Markdown</title>
+	<link rel="stylesheet" href="index.css">
+	
+	<script type="text/javascript">
+		
+		window.onload = function resizeBlog(){
+			var width = document.body.clientWidth;
+			
+			if(width < 500){
+				document.getElementById("blog").style.height = "200px";
+			}
+			else{
+				document.getElementById("blog").style.height = "350px;"
+			}
+		}
+	
+	</script>
+</head>
+
+<body>
+<header>
+	<img id="blog" src="images/blog1.png" alt="blog1.png">
+	
+	<p id="name">Yin YuHui</p>
+	
+	<div id="link">
+		<span><a href="../index.html">HOME</a></span>
+		<span>      </span>
+		<span><a href="me.html">ABOUT ME</a></span>
+	</div>
+	
+	<h1>About Markdown</h1>
+	<p id="motto">I can because I think I can</p>
+</header>
+
+<main>
+	<!--
+	
+	<article>
+		<h2><a href="http://yinyuhui21.com">文章2</a></h2>
+		<p class="intro">“文章简介（一句话）”</p>
+		<p class="article">文章内容</p>
+		<p class="more"><a href="http://yinyuhui21.com">查看全文</a></p>
+	</article>
+	
+	-->
+	<article>
+		<h2><a href="Markdown/Markdown语法笔记2.html">Markdown语法笔记2</a></h2>
+		<p class="intro">“Markdown标题居中、段首缩进、分割线等”</p>
+		<p class="article">本文将介绍如何设置标题居中、中文段首缩进两个汉字及分割线等。</p>
+		<p class="more"><a href="Markdown/Markdown语法笔记2.html">查看全文</a></p>
+	</article>
+	
+	<article>
+		<h2><a href="Markdown/Markdown语法笔记1.html">Markdown语法笔记1</a></h2>
+		<p class="intro">“Markdown基础语法”</p>
+		<p class="article">在使用MarkdownPad时做笔记或写博文时，与纯文本编辑软件有些不同，它可以使用一些标记来控制格式。</p>
+		<p class="more"><a href="Markdown/Markdown语法笔记1.html">查看全文</a></p>
+	</article>
+	
+	<article>
+		<h2><a href="Markdown/Markdown(Windows).html">Markdown(Windows)</a></h2>
+		<p class="intro">“Markdown下载安装及注册”</p>
+		<p class="article">这是我首次使用Markdown，必须记录下来啊，毕竟这标志着我又向程序媛靠近了一些，也为不知如何入门的提供些方法。这篇文就是使用MarkdownPad写的哦~</p>
+		<span class="more"><a href="Markdown/Markdown(Windows).html">查看全文</a></span>
+	</article>
+	
+	<section>
+		<span>View <a id="github" target="_blank" href="https://github.com/yuhui21" title="Yin YuHui's Github">yuhui21</a> on github</span>
+	</section>
+</main>
+
+<footer>
+	Copyright&copy;Yin YuHui<br>
+	Theme by Yin YuHui
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>视觉表现理论知识</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f3eee8;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a:link {
+  color:  #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b9a98b;
+  text-decoration: none;
+}
+
+main a:visited{
+	color: #a5b5c6;
+	text-decoration: none;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0;
+  padding: 0 0;
+  white-space: pre;
+  border: 1px solid #eaeaea;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #fbfae9;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>视觉表现理论知识</h1>
+<blockquote>
+<p>尹玉慧</p>
+</blockquote>
+<p><br>
+终于可以知道视觉表现的实现方式，而不是一个一个的具体实现了，突然感到自己能够把握页面的整体布局了呢，似乎学到了表现背后的东西？</p>
+<p>以下是一个突然发现自己见识如此少的女汉子的嘶吼</p>
+<p><strong>啊啊啊，刚刚注意到width设置的是内容区的宽度，增加 padding 或 margin 后会增加总体宽度</strong></p>
+<p><strong>啊啊啊啊，今天才知道只有内容区和左右外边距可以设置为 auto ！！！！</strong>
+<br><br></p>
+<h2>一、相关术语</h2>
+<ul>
+<li>
+<p>流 ： 所有元素都被放置在流中， 页面在显示时， 元素一个一个的流到屏幕上， 当然也有脱离流的情况。如果一个元素<strong>浮动</strong>或<strong>定位</strong>，那么它就会从流里脱离出来</p>
+</li>
+<li>
+<p>非替换元素 ： 如段落，还是用例子比较好</p>
+</li>
+<li>
+<p>替换元素 ： 如图片</p>
+</li>
+<li>
+<p>块级元素 ： 段落、标题、 div 等，流入后会产生一个换行。 使用 display: block; 可以让元素生成块级框</p>
+</li>
+<li>
+<p>行内元素 ： strong 、 span 等， 不会换行。 使用 display : inline; 可以让元素生成一个框</p>
+</li>
+<li>
+<p>根元素 ： html
+<br><br></p>
+</li>
+</ul>
+<h2>二、auto</h2>
+<h3>１.　横向：只有内容区 width 以及左右外边距可以设为 auto</h3>
+<ul>
+<li>
+<p>一个 auto ： 会占用所有剩余空间</p>
+</li>
+<li>
+<p>两个auto ： 一般是外边距，则内容区居中</p>
+</li>
+<li>
+<p>三个auto ： margin 为 0， 内容区会尽量占据到最宽</p>
+</li>
+</ul>
+<h3>２.　纵向 ： 只有内容区 height 以及上下外边距可以设为 auto</h3>
+<ul>
+<li><strong>正常流中上下外边距设置为 auto 会自动计算为 0 ，而不是像横向那样居中</strong>
+<br><br></li>
+</ul>
+<h2>三、margin</h2>
+<p>　　在 padding 、 margin 、 border 中只有 margin 可以设为负值，而且要注意，<strong>margin 设为负值时要满足 padding + margin + border 的总和为父元素的 width</strong>， 这是十分重要的。</p>
+<p>　　没错，这个我之前也不知道....鬼知道为嘛我会漏了这么多重要的知识点没学....还好现在补起来了，感谢权威指南~~
+<br><br></p>
+<h2>四、显示角色转换</h2>
+<ul>
+<li>
+<p>想要将列表元素作为一个横条用竖线隔开的导航条</p>
+<pre><code>display: inline; 
+</code></pre>
+
+</li>
+</ul>
+<p>　　再为所有列表元素加上右边框，第一个列表元素加上左边框即可</p>
+<ul>
+<li>
+<p>将几个链接放到 div 中，想要布局为垂直边栏</p>
+<pre><code>display: block;
+</code></pre>
+
+</li>
+</ul>
+<p>　　再增加些样式即可显示为漂亮的竖直导航栏</p>
+<ul>
+<li>
+<p>在一行中想要插入一个块结构</p>
+<pre><code>display: inline-block;
+</code></pre>
+
+</li>
+</ul>
+<p>　　会把外观类似于一个竖直导航条的东西插到行中，如果没有设置这个块的 width ，会自适应为一行</p>
+<ul>
+<li>
+<p>run-in</p>
+<pre><code>display: run-in;
+</code></pre>
+
+</li>
+</ul>
+<p>　　当然，使用这个是有限制的，只有其后的一个元素为块级元素时，才会转换为那个块级元素开始处的行内元素。</p>
+<p>　　<strong>似乎不太支持，我测试的时候只有 IE 和 Safari 成功了，chrome、 Opera、Firefox 均不支持</strong></p>
+
+
+<p>END~~~≥ω≤</p>
+<p><br></p>
+<p>原文来自<a href="http://yinyuhui21.com/blog/HTML与CSS/视觉表现理论知识.html">尹玉慧的Blog</a></p>
+<p><a href="http://yinyuhui21.com">返回首页</a>　　　　<a href="../HTML与CSS.html">返回文章列表</a></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>浮动&amp;定位</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f3eee8;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a:link {
+  color:  #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b9a98b;
+  text-decoration: none;
+}
+
+main a:visited{
+	color: #a5b5c6;
+	text-decoration: none;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0;
+  padding: 0 0;
+  white-space: pre;
+  border: 1px solid #eaeaea;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #fbfae9;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>浮动&amp;定位</h1>
+<blockquote>
+<p>尹玉慧</p>
+</blockquote>
+<p><br></p>
+<p>浮动和定位能够让我们把一些元素放到理想的位置，当然，相比之下 float 只能浮动到左边或右边，而定位可以定位到任意位置，两者各有优劣，在使用时要考虑具体情况，选择最适合的。</p>
+<p>还记得曾经练习布局的时候把整个页面使用 position 做完了.... 还好那个是固定长宽而且元素不太多，想想就觉得自己真是太奇葩了....</p>
+<p>以下是正文~~似乎好多都是常识？
+<br><br></p>
+<h2>一、浮动 ( float )</h2>
+<ul>
+<li>
+<p>浮动元素周围的外边距不会合并，而且它还会产生一个块级框</p>
+</li>
+<li>
+<p>浮动元素顶点不能超过之前所有浮动元素的顶端</p>
+</li>
+<li>
+<p>浮动元素的顶端不会超过顶部行框</p>
+</li>
+<li>
+<p>浮动元素不会不会发生重叠的现象，上面有浮动元素了就浮动到它下面，左边有浮动元素了，就紧挨着浮动到右边，就这样简单，真是棒极了。定位才不会有这么好的默认效果呢，一不注意就重叠了。</p>
+</li>
+<li>
+<p>浮动元素必须尽可能的向左或向右，而且会尽最大可能放到最高的地方。</p>
+</li>
+<li>
+<p>浮动元素可以设置外边距来微调位置,但这样有可能与内容重叠</p>
+<pre><code>img{
+    float: left;
+    margin: 10px -15px 10px 10px;
+}
+</code></pre>
+
+</li>
+</ul>
+<p>　　 重叠的结果有两种可能：</p>
+<p>　　 1. 其后是一个行内框。 行内框所有内容聚在浮动元素之上显示</p>
+<p>　　 2. 其后是一个块框。 块框内容在浮动元素之上显示，其余如边框、背景在浮动元素之下显示</p>
+<ul>
+<li>
+<p>清除浮动。 在不想要其左侧或右侧有浮动元素的 CSS 中加上</p>
+<pre><code>clear: left;        //或 right 或 both
+</code></pre>
+
+<p><br></p>
+</li>
+</ul>
+<h2>二、定位 ( position )</h2>
+<ul>
+<li>
+<p>最大最小属性</p>
+<pre><code>max-width , max-height , min-width , min-height
+</code></pre>
+
+</li>
+</ul>
+<p>　　可以使窗口最大不超过多少或最小不低于多少,可以是数值也可以是百分数。</p>
+<ul>
+<li>
+<p>内容溢出 ( overflow )</p>
+<pre><code>visible ， hidden ， scroll ， auto
+</code></pre>
+
+</li>
+</ul>
+<p>　　visible 是默认值，超出了元素框的内容仍会显示。 hidden 仅显示元素框内的内容。 scroll 显示元素框内的内容，但会提供一个滚动条，使用户有途径访问超出元素框的内容。 auto 由浏览器决定如何做，一般会选择给滚动条。</p>
+<ul>
+<li>
+<p>裁剪 ( clip )</p>
+<pre><code>rect( top , right , bottom , left) 或 auto
+</code></pre>
+
+</li>
+</ul>
+<p>　　要用都好隔开四个值且这些值不能为百分数。如果值为 auto， 则默认为0.</p>
+<ul>
+<li>
+<p>元素可见性 ( visibility )</p>
+<pre><code>visible （ 可见 ）, hidden （ 隐藏，但保留其空间 ）, collapse 
+</code></pre>
+
+</li>
+</ul>
+
+
+
+<p>END~~~≥ω≤</p>
+<p><br></p>
+<p>原文来自<a href="http://yinyuhui21.com/blog/HTML与CSS/浮动&amp;定位.html">尹玉慧的Blog</a></p>
+<p><a href="http://yinyuhui21.com">返回首页</a>　　　　<a href="../HTML与CSS.html">返回文章列表</a></p>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

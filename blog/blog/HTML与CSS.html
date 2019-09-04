@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML&CSS</title>
+	<link rel="stylesheet" href="index.css">
+	
+	<script type="text/javascript">
+		
+		window.onload = function resizeBlog(){
+			var width = document.body.clientWidth;
+			
+			if(width < 500){
+				document.getElementById("blog").style.height = "200px";
+			}
+			else{
+				document.getElementById("blog").style.height = "350px;"
+			}
+		}
+	
+	</script>
+</head>
+
+<body>
+<header>
+	<img id="blog" src="images/blog1.png" alt="blog1.png">
+	
+	<p id="name">Yin YuHui</p>
+	
+	<div id="link">
+		<span><a href="../index.html">HOME</a></span>
+		<span>      </span>
+		<span><a href="me.html">ABOUT ME</a></span>
+	</div>
+	
+	<h1>About HTML&CSS</h1>
+	<p id="motto">I can because I think I can</p>
+</header>
+
+<main>
+	<!--
+	
+
+	<article>
+		<h2><a href="http://yinyuhui21.com">文章2</a></h2>
+		<p class="intro">“文章简介（一句话）”</p>
+		<p class="article">文章内容</p>
+		<p class="more"><a href="http://yinyuhui21.com">查看全文</a></p>
+	</article>
+
+
+	-->
+	
+	<article>
+		<h2><a href="HTML与CSS/附录.html">权威指南附录</a></h2>
+		<p class="intro">“补充忽略了或不太熟练的东西”</p>
+		<p class="article">眼看着权威指南就要看完了，过程中写了几篇笔记传到自己的博客上，但这更多是为了填自己学习时留下的坑，留下一些今后忘记了可以查阅的资料</p>
+		<p class="more"><a href="HTML与CSS/附录.html">查看全文</a></p>
+	</article>
+
+
+	<article>
+		<h2><a href="HTML与CSS/用户界面样式.html">用户界面样式</a></h2>
+		<p class="intro">“系统字体、颜色，光标样式”</p>
+		<p class="article">页面样式除了自己设计，还可以模仿系统设计，使其看上去类似于操作系统的一部分。</p>
+		<p class="more"><a href="HTML与CSS/用户界面样式.html">查看全文</a></p>
+	</article>
+
+
+	<article>
+		<h2><a href="HTML与CSS/列表与生成内容.html">列表与生成内容</a></h2>
+		<p class="intro">“列表标志类型、自定义、定位等”</p>
+		<p class="article">列表在我们实现页面布局时也是十分常用的，比如导航条我就比较喜欢用列表做。既然如此重要，当然要好好掌握了~ </p>
+		<p class="more"><a href="HTML与CSS/列表与生成内容.html">查看全文</a></p>
+	</article>
+
+
+	<article>
+		<h2><a href="HTML与CSS/表布局.html">表布局 ( 非 CSS 表格布局 )</a></h2>
+		<p class="intro">“表格相关”</p>
+		<p class="article">表格布局一般是不太推荐使用的，但它也有可取的地方，比如可以让每一行的所有单元格都有相同的高度，无论单元格中究竟有多少内容，还可以让一列中的单元格有相同的宽度。</p>
+		<p class="more"><a href="HTML与CSS/表布局.html">查看全文</a></p>
+	</article>
+
+
+	<article>
+		<h2><a href="HTML与CSS/浮动&amp;定位.html">浮动&amp;定位</a></h2>
+		<p class="intro">“浮动与定位相关”</p>
+		<p class="article">浮动和定位能够让我们把一些元素放到理想的位置，当然，相比之下 float 只能浮动到左边或右边，而定位可以定位到任意位置，两者各有优劣，在使用时要考虑具体情况，选择最适合的。</p>
+		<p class="more"><a href="HTML与CSS/浮动&amp;定位.html">查看全文</a></p>
+	</article>
+
+
+	<article>
+		<h2><a href="HTML与CSS/视觉表现理论知识.html">视觉表现理论知识</a></h2>
+		<p class="intro">“页面视觉表现相关知识(简洁版 只记录了自己觉得有价值的东西)”</p>
+		<p class="article">终于可以知道视觉表现的实现方式，而不是一个一个的具体实现了，突然感到自己能够把握页面的整体布局了呢，似乎学到了表现背后的东西？</p>
+		<p class="more"><a href="HTML与CSS/视觉表现理论知识.html">查看全文</a></p>
+	</article>
+
+
+	<article>
+		<h2><a href="HTML与CSS/文本属性.html">文本属性</a></h2>
+		<p class="intro">“文本设置方法，包括对齐、段首缩进、大小写转换等”</p>
+		<p class="article">文本属性也是必须存在的不是吗？ 否则我们如何让页面满足我们一天天增长的审美呢~ </p>
+		<p class="more"><a href="HTML与CSS/文本属性.html">查看全文</a></p>
+	</article>
+
+
+	<article>
+		<h2><a href="HTML与CSS/字体属性.html">字体属性</a></h2>
+		<p class="intro">“本文记录五大类型字体及字体属性设置方法和设置过程中要注意的小问题”</p>
+		<p class="article">字体设置是 CSS 中十分重要的，如果不能设置字体，那么我认为 CSS 存在的意义就少了一半。</p>
+		<p class="more"><a href="HTML与CSS/字体属性.html">查看全文</a></p>
+	</article>
+
+
+	<article>
+		<h2><a href="HTML与CSS/伪类与伪元素.html">伪类&amp;伪元素</a></h2>
+		<p class="intro">“伪类与伪元素的常规用法及踩第一次学时跳的坑”</p>
+		<p class="article">伪类和伪元素使用起来要比属性选择器更加炫酷呢~</p>
+		<p class="more"><a href="HTML与CSS/伪类与伪元素.html">查看全文</a></p>
+	</article>
+
+	<article>
+		<h2><a href="HTML与CSS/属性选择器.html">属性选择器</a></h2>
+		<p class="intro">“具体属性选择、部分属性选择、特定属性选择”</p>
+		<p class="article">在学习了经典的 《 Head First HTML 与 CSS 》 之后，当然要加以拓展，毕竟这本书只是把最常用的一些东西讲了一遍，真正用来排版还是有些不够用的。</p>
+		<p class="more"><a href="HTML与CSS/属性选择器.html">查看全文</a></p>
+	</article>
+	
+	<article>
+		<h2><a href="HTML与CSS/媒体查询&响应式布局.html">媒体查询&amp;响应式布局</a></h2>
+		<p class="intro">“使用媒体查询实现响应式布局(初级)”</p>
+		<p class="article">为了适应不同屏幕宽度及浏览器窗口宽度，我们需要响应式布局，那当然少不了媒体查询。</p>
+		<p class="more"><a href="http://yinyuhui21.com/blog/HTML与CSS/媒体查询&响应式布局.html">查看全文</a></p>
+	</article>
+	
+	<article>
+		<h2><a href="HTML与CSS/前端学习路线1.html">前端学习路线1</a></h2>
+		<p class="intro">“本文介绍了前端入门学习路线”</p>
+		<p class="article">第一阶段：HTML与CSS</p>
+		<p class="more"><a href="HTML与CSS/前端学习路线1.html">查看全文</a></p>
+	</article>
+	
+	<section>
+		<span>View <a id="github" target="_blank" href="https://github.com/yuhui21" title="Yin YuHui's Github">yuhui21</a> on github</span>
+	</section>
+	
+</main>
+
+<footer>
+	Copyright&copy;Yin YuHui<br>
+	Theme by Yin YuHui
+</footer>
+
+
+</body>
+</html>

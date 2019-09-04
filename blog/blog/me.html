@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Me</title>
+	<link rel="stylesheet" href="index.css">
+	
+	<script type="text/javascript">
+		
+		window.onload = function resizeBlog(){
+			var width = document.body.clientWidth;
+			
+			if(width < 500){
+				document.getElementById("blog").style.height = "200px";
+			}
+			else{
+				document.getElementById("blog").style.height = "350px;"
+			}
+		}
+	</script>
+	
+	<style>
+		article h1{
+			font-size: 1.5em;
+			color: #333333;
+		}
+		
+		article p{
+			font-size: 1.2em;
+		}
+	</style>
+</head>
+
+<body>
+<header>
+	<img id="blog" src="images/blog1.png" alt="blog1.png">
+	
+	<p id="name">Yin YuHui</p>
+	
+	<div id="link">
+		<span><a href="../index.html">HOME</a></span>
+	
+	</div>
+	
+	<h1>About Me</h1>
+	<p id="motto">Never say die</p>
+</header>
+
+<main>
+	
+	<article>
+		<h1>Cherry / 尹玉慧</h1>
+		<p>武汉理工大学在读，物联网工程专业。</p>
+		<p>Address: Wuhan China</p>
+		<p>Email: yinyuhui21@sina.com</p>
+		<p>QQ: 2529127113</p>
+		<p>微信：YINGWYR</p>
+		<p>Github: <a target="_blank" href="https://github.com/yuhui21" title="Yin YuHui's Github">https://github.com/yuhui21</a></p>
+		<p>对Web前端有着浓厚兴趣，热爱计算机，正在不断武装自己。</p>
+		<p>相信有志者事竟成，重要的不是天分，而是不断求索的心、付诸实施的勇气和毅力。</p>
+		<p>坚持学习，不断总结，不断进步，保持激情，永不言弃，从小白走向大牛。</p>
+	</article>
+	
+	
+	<section>
+		<span>View <a id="github" target="_blank" href="resume.html" title="My Reume">My Resume</a></span>
+	</section>
+
+</main>
+
+<footer>
+	Copyright&copy;Yin YuHui<br>
+	Theme by Yin YuHui
+</footer>
+
+
+</body>
+</html>

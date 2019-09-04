@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>尹玉慧的Blog</title>
+	<link rel="stylesheet" href="blog/index.css">
+	
+	<script type="text/javascript">
+		
+		window.onload = function resizeBlog(){
+			var width = document.body.clientWidth;
+			
+			if(width < 500){
+				document.getElementById("blog").style.height = "200px";
+			}
+			else{
+				document.getElementById("blog").style.height = "350px;"
+			}
+		}
+	
+	</script>
+</head>
+
+<body>
+<header>
+	<img id="blog" src="blog/images/blog.png" alt="blog.png">
+	
+	<p id="name">Yin YuHui</p>
+	
+	<div id="link">
+		<span><a href="blog/me.html">ABOUT ME</a></span>
+	</div>
+	
+	<h1>Yin YuHui's Blog</h1>
+	<p id="motto">I can because I think I can</p>
+</header>
+
+<main>
+	<!--
+	
+	<article>
+		<h2><a href="http://yinyuhui21.com">文章2</a></h2>
+		<p class="intro">“文章简介（一句话）”</p>
+		<p class="article">文章内容</p>
+		<p class="more"><a href="http://yinyuhui21.com">查看全文</a></p>
+	</article>
+	
+	
+	<article>
+		<h2><a href="blog/JavaScript.html">Javascript(0)</a></h2>
+		<p class="intro">“Javascript相关笔记、理解”</p>
+		<p class="more"><a href="blog/JavaScript.html">查看所有该类别博文</a></p>
+	</article>
+	
+	-->
+	
+	<article>
+		<h2><a href="blog/HTML与CSS.html">HTML与CSS(12)</a></h2>
+		<p class="intro">“HTML与CSS相关笔记、理解”</p>
+		<span class="more"><a href="blog/HTML与CSS.html">查看所有该类别博文</a></span>
+	</article>
+	
+	<article>
+		<h2><a href="blog/Markdown.html">Markdown(3)</a></h2>
+		<p class="intro">“Markdown相关笔记、理解”</p>
+		<p class="more"><a href="blog/Markdown.html">查看所有该类别博文</a></p>
+	</article>
+	
+	<section>
+		<span>View <a id="github" target="_blank" href="https://github.com/yuhui21" title="Yin YuHui's Github">yuhui21</a> on github</span>
+	</section>
+</main>
+
+<footer>
+	Copyright&copy;Yin YuHui<br>
+	Theme by Yin YuHui
+</footer>
+
+
+</body>
+</html>

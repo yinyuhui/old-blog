@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>伪类与伪元素</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f3eee8;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a:link {
+  color:  #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b9a98b;
+  text-decoration: none;
+}
+
+main a:visited{
+	color: #a5b5c6;
+	text-decoration: none;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0;
+  padding: 0 0;
+  white-space: pre;
+  border: 1px solid #eaeaea;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #fbfae9;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>伪类和伪元素</h1>
+<blockquote>
+<p>尹玉慧</p>
+</blockquote>
+<p>伪类和伪元素使用起来要比属性选择器更加炫酷呢~
+<br><br></p>
+<h2>一、a元素的伪类</h2>
+<p>a元素的伪类包括：</p>
+<ol>
+<li>:link　　2. :visited　　3. :focus　　4. :hover　　5. :active</li>
+</ol>
+<p>　　一般来说，我们在设置链接样式的时候使用1 2 4 这三个伪类就足够了，因为我们只需要设置链接点击前后与悬停时的样式页面可用性就已经很不错了。默认最佳顺序即为上述顺序。当然 :focus 伪类不仅仅只能用于链接，如以下语句使得focus处背景为银色，同时字体加粗：</p>
+<pre><code>input :focus{
+    background: sliver;
+    font-weight: bold;
+}
+</code></pre>
+
+<p><strong>IE7不支持对表单元素应用focus</strong>
+<br><br></p>
+<h2>二、:first-child 伪类</h2>
+<p>　　:first-child 是一个极易产生误解的伪类，一直以来我对它的理解都是错误的，直到我意识到了一个问题，下面是按照 《 CSS权威指南 》 中的示例代码手敲的，发现 在chrome 与 IE 中测试均非书上效果，以下是我手打的代码：</p>
+<pre><code>&lt;div&gt;
+    &lt;p&gt;there are the necessary steps:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Insert key&lt;/li&gt;
+        &lt;li&gt;Turn key &lt;strong&gt;clockwise&lt;/strong&gt;&lt;/li&gt;
+        &lt;li&gt;Push&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Do &lt;em&gt;not&lt;/em&gt; push the brake&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<hr />
+<pre><code>p :first-child{
+    font-weight: bold;
+}
+
+li :first-child{
+    text-transform: uppercase;
+}
+</code></pre>
+
+<p>上例效果：</p>
+<div align="center" >
+<img src="http://p1.bqimg.com/567571/b0796e571bf0dcb2.png">
+</div>
+<p>由此我得到结论  :first-child 选择的是 p 和 li 的第一个子元素，而非书上所说选择的第一个 p 元素和第一个 li 元素，而书上的讲解有错误，一直到我在做第四点的测试时，意识到了自己犯了一个超级超级大的错误： <strong>我在冒号之前加了空格键！</strong>这几乎是不能原谅的....</p>
+<p>下图是去掉我私自加的空格之后的测试结果：<br><br></p>
+<div align="center" >
+<img src="http://i1.piimg.com/567571/d38d9063ab713c03.png">
+</div>
+<p><strong>IE6 前不支持  :first-child， IE7 支持</strong>
+<br><br></p>
+<h2>三、结合伪类</h2>
+<p>结合伪类是我第一次学习时未接触到的，感觉很新奇呀，必须试试 \^o^/ </p>
+<pre><code>a:link:hover{
+    color: red;     //未访问链接鼠标悬停时颜色为红色
+}
+
+a:visited:hover{
+    color: yellow;      //已访问链接鼠标悬停时颜色为黄色
+}
+</code></pre>
+
+<p>亲测可用哦~ 不过实际中不要用这两个颜色，这是记笔记比十六进制的颜色要方便查看些而已，要不然整个页面被老板看到了会被扣奖金的~</p>
+<p><strong>IE6 前不支持，只能识别到最后一个伪类，IE7 支持</strong>
+<br><br></p>
+<h2>四、 :before　　:after</h2>
+<p>可用于在元素前后插入内容，没错，<strong>我又又又又加了空格！</strong>导致的直接结果就是我不断刷新页面，结果出现的东西与我预期的区别实在是太大了</p>
+<pre><code>&lt;body&gt;
+&lt;h1&gt;标题&lt;/h1&gt;
+&lt;p&gt;文本内容&lt;/p&gt;
+</code></pre>
+
+<h2>	</body></h2>
+<pre><code>h1 :before{
+    content: &quot;[]&quot;;
+    color: red;
+}
+
+body :after{
+    content: &quot;The End!&quot;
+}
+</code></pre>
+
+<p>这是让我感到疑惑的结果
+<br><br></p>
+<div align="center">
+	<img src="http://p1.bqimg.com/567571/fe924816d0b9bc72.png">
+</div>
+<p>于是我开始查看代码，可是代码如此简单，只有几行，很快我就得到了上面的结论，去掉空格后果然就大不相同了~
+<br><br></p>
+<div align="center">
+	<img src="http://p1.bqimg.com/567571/b8a11d2dd1b85599.png">
+</div>
+<p><strong>加上空格就相当于是子孙选择器了，所以不要随意加空格，这是十分不好的习惯，我就是在写到这里时才发现自己之前用到的伪类全都加上了空格，还好曾经都是给链接加样式，是可以识别的</strong>
+<br><br></p>
+<h2>五、以下是伪类伪元素无关的补充</h2>
+<p><em>既然写到加空格，那就再多说一个。</p>
+<pre><code>url(http://xxxxx.com)
+</code></pre>
+
+<p>要注意一定不能够在 url 与 括号之间加上空格，否则会被忽视掉
+</em></p>
+
+
+<p>END~~~≥ω≤</p>
+<p><br></p>
+<p>原文来自<a href="http://yinyuhui21.com/blog/HTML与CSS/伪类与伪元素.html">尹玉慧的Blog</a></p>
+<p><a href="http://yinyuhui21.com">返回首页</a>　　　　<a href="../HTML与CSS.html">返回文章列表</a></p>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

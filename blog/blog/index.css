@@ -1,0 +1,401 @@
+
+body{
+	background-color: #f3eee8;
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	font-size: medium;
+	font-family: "Microsoft YaHei", "微软雅黑", "STHeiti Light [STXihei]", "华文细黑", sans-serif ;
+}
+
+header{
+	position: relative;
+}
+
+@media screen and (max-device-width: 400px){
+	body{
+		font-size: small;
+	}
+	
+	header img {
+		height: 200px;
+		width: 100%;
+	}
+	
+	header #name {
+		font-size: 1.3em;
+		position: absolute;
+		top: -5px;
+		left: 15px;
+	}
+	
+	header #link {
+		font-size: 1em;
+		position: absolute;
+		top: 15px;
+		right: 10px;
+	}
+	
+	header span{
+		margin-left: 5px;
+	}
+	
+	header h1 {
+		font-size: 2em;
+		position: absolute;
+		left: 50%;
+		top: 40%;
+		transform: translate(-50%, -50%);
+	}
+	
+	header #motto {
+		font-size: 1em;
+		position: absolute;
+		left: 50%;
+		top: 55%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media screen and ( max-width: 400px){
+	body{
+		font-size: small;
+	}
+	
+	header img {
+		height: 200px;
+		width: 100%;
+	}
+	
+	header #name {
+		font-size: 1.3em;
+		position: absolute;
+		top: -5px;
+		left: 15px;
+	}
+	
+	header #link {
+		font-size: 1em;
+		position: absolute;
+		top: 15px;
+		right: 10px;
+	}
+	
+	header span{
+		margin-left: 5px;
+	}
+	
+	header h1 {
+		font-size: 1.8em;
+		position: absolute;
+		left: 50%;
+		top: 40%;
+		transform: translate(-50%, -50%);
+	}
+	
+	header #motto {
+		font-size: 0.9em;
+		position: absolute;
+		left: 50%;
+		top: 55%;
+		transform: translate(-50%, -50%);
+	}
+}
+	
+@media screen and (min-width: 401px) and ( max-width: 600px) {
+	header img{
+		height: 250px;
+		width: 100%;
+	}
+	
+	header #name{
+		font-size: 1.3em;
+		position: absolute;
+		top: -5px;
+		left: 15px;
+	}
+	
+	header #link{
+		font-size: 1.1em;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	
+	header span{
+		margin-left: 10px;
+	}
+	
+	header h1 {
+		font-size: 2.6em;
+		position: absolute;
+		left: 50%;
+		top: 35%;
+		transform: translate(-50% ,-50%);
+	}
+	
+	header #motto{
+		font-size: 1.3em;
+		position: absolute;
+		left: 50%;
+		top: 55%;
+		transform: translate(-50% ,-50%);
+	}
+}
+	
+	@media screen and (min-width: 601px) and ( max-width: 800px) {
+	header img{
+		height: 300px;
+		width: 100%;
+	}
+	
+	header #name{
+		font-size: 1.5em;
+		position: absolute;
+		top: -5px;
+		left: 15px;
+	}
+	
+	header #link{
+		font-size: 1.1em;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+		
+		header span{
+			margin-left: 12px;
+		}
+		
+		header h1 {
+		font-size: 3.2em;
+		position: absolute;
+		left: 50%;
+		top: 35%;
+		transform: translate(-50% ,-50%);
+	}
+	
+	header #motto{
+		font-size: 1.6em;
+		position: absolute;
+		left: 50%;
+		top: 55%;
+		transform: translate(-50% ,-50%);
+	}
+}
+
+@media screen and ( min-width: 801px) and (max-width: 1000px){
+	header img{
+		height: 380px;
+		width: 100%;
+	}
+	
+	header #name{
+		font-size: 1.6em;
+		position: absolute;
+		top: 0;
+		left: 20px;
+	}
+	
+	header #link{
+		font-size: 1.2em;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
+	
+	header span{
+		margin-left: 16px;
+	}
+	
+	header h1 {
+		font-size: 3.6em;
+		position: absolute;
+		left: 50%;
+		top: 35%;
+		transform: translate(-50% ,-50%);
+	}
+	
+	header #motto{
+		font-size: 1.8em;
+		position: absolute;
+		left: 50%;
+		top: 55%;
+		transform: translate(-50% ,-50%);
+	}
+}
+
+@media screen and ( min-width: 1001px) and (max-width: 1200px){
+	header img{
+		height: 420px;
+		width: 100%;
+	}
+	
+	header #name{
+		font-size: 1.7em;
+		position: absolute;
+		top: -5px;
+		left: 25px;
+	}
+	
+	header #link{
+		font-size: 1.3em;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
+	
+	header span{
+		margin-left: 20px;
+	}
+	
+	header h1 {
+		font-size: 4em;
+		position: absolute;
+		left: 50%;
+		top: 35%;
+		transform: translate(-50% ,-50%);
+	}
+	
+	header #motto{
+		font-size: 2em;
+		position: absolute;
+		left: 50%;
+		top: 55%;
+		transform: translate(-50% ,-50%);
+	}
+}
+
+@media screen and ( min-width: 1201px){
+	header img{
+		height: 450px;
+		width: 100%;
+	}
+	
+	header #name{
+		font-size: 1.8em;
+		position: absolute;
+		top: -5px;
+		left: 25px;
+	}
+	
+	header #link{
+		font-size: 1.4em;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
+	
+	header span{
+		margin-left: 25px;
+	}
+	
+	header h1 {
+		font-size: 4.4em;
+		position: absolute;
+		left: 50%;
+		top: 35%;
+		transform: translate(-50% ,-50%);
+	}
+	
+	header #motto{
+		font-size: 2.2em;
+		position: absolute;
+		left: 50%;
+		top: 55%;
+		transform: translate(-50% ,-50%);
+	}
+}
+
+header #name{
+	color: #fff;
+	font-weight: bolder;
+}
+
+header #link{
+	color: #fff;
+	font-weight: bold;
+	display: inline;
+}
+
+header a{
+	text-decoration: none;
+}
+
+header #link a:link{
+	color: white;
+}
+
+header #link a:hover{
+	color: #DCE278;
+}
+
+header a:visited{
+	color: white;
+}
+
+header h1, header #motto{
+	white-space: nowrap;
+	color: #fff;
+}
+
+main{
+	margin: 0 20px 30px 20px;
+}
+
+main h2{
+	font-size: 1.6em;
+	color: #333;
+	font-weight: bolder;
+}
+
+article{
+	padding: 15px 0 22px 0;
+}
+
+section{
+	padding: 28px 0 35px 0;
+}
+
+article, section{
+	border-bottom: thin solid #aaa;
+}
+
+article .intro{
+	font-size: 0.9em;
+}
+
+article .article{
+	color: #555;
+}
+
+article .more{
+	font-size: small;
+}
+
+main a{
+	text-decoration: none;
+}
+
+main #github{
+	font-style: italic;
+}
+
+main a:link{
+	color: #666;
+}
+
+main a:hover{
+	color: #b9a98b;
+}
+
+main a:visited{
+	color: #a5b5c6;
+}
+
+footer{
+	height: 50px;
+	font-size: 0.7em;
+	color: #333;
+	text-align: center ;
+}

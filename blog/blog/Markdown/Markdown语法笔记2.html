@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Markdown语法笔记2</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+		/* Author: Nicolas Hery - http://nicolashery.com */
+		/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+		/* Source: https://github.com/nicolahery/markdownpad-github */
+		
+		/* RESET
+		=============================================================================*/
+		
+		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		
+		/* BODY
+		=============================================================================*/
+		
+		body {
+			font-family: Helvetica, arial, freesans, clean, sans-serif;
+			font-size: 14px;
+			line-height: 1.6;
+			color: #333;
+			background-color: #f3eee8;
+			padding: 20px;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		
+		body>*:first-child {
+			margin-top: 0 !important;
+		}
+		
+		body>*:last-child {
+			margin-bottom: 0 !important;
+		}
+		
+		/* BLOCKS
+		=============================================================================*/
+		
+		p, blockquote, ul, ol, dl, table, pre {
+			margin: 15px 0;
+		}
+		
+		/* HEADERS
+		=============================================================================*/
+		
+		h1, h2, h3, h4, h5, h6 {
+			margin: 20px 0 10px;
+			padding: 0;
+			font-weight: bold;
+			-webkit-font-smoothing: antialiased;
+		}
+		
+		h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+			font-size: inherit;
+		}
+		
+		h1 {
+			font-size: 28px;
+			color: #000;
+		}
+		
+		h2 {
+			font-size: 24px;
+			border-bottom: 1px solid #ccc;
+			color: #000;
+		}
+		
+		h3 {
+			font-size: 18px;
+		}
+		
+		h4 {
+			font-size: 16px;
+		}
+		
+		h5 {
+			font-size: 14px;
+		}
+		
+		h6 {
+			color: #777;
+			font-size: 14px;
+		}
+		
+		body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+		
+		a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+			margin-top: 0;
+			padding-top: 0;
+		}
+		
+		h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+			margin-top: 10px;
+		}
+		
+		/* LINKS
+		=============================================================================*/
+		
+		a:link {
+			color:  #666;
+			text-decoration: none;
+		}
+		
+		a:hover {
+			color: #b9a98b;
+			text-decoration: none;
+		}
+		
+		main a:visited{
+			color: #a5b5c6;
+			text-decoration: none;
+		}
+		
+		/* LISTS
+		=============================================================================*/
+		
+		ul, ol {
+			padding-left: 30px;
+		}
+		
+		ul li > :first-child,
+		ol li > :first-child,
+		ul li ul:first-of-type,
+		ol li ol:first-of-type,
+		ul li ol:first-of-type,
+		ol li ul:first-of-type {
+			margin-top: 0;
+		}
+		
+		ul ul, ul ol, ol ol, ol ul {
+			margin-bottom: 0;
+		}
+		
+		dl {
+			padding: 0;
+		}
+		
+		dl dt {
+			font-size: 14px;
+			font-weight: bold;
+			font-style: italic;
+			padding: 0;
+			margin: 15px 0 5px;
+		}
+		
+		dl dt:first-child {
+			padding: 0;
+		}
+		
+		dl dt>:first-child {
+			margin-top: 0;
+		}
+		
+		dl dt>:last-child {
+			margin-bottom: 0;
+		}
+		
+		dl dd {
+			margin: 0 0 15px;
+			padding: 0 15px;
+		}
+		
+		dl dd>:first-child {
+			margin-top: 0;
+		}
+		
+		dl dd>:last-child {
+			margin-bottom: 0;
+		}
+		
+		/* CODE
+		=============================================================================*/
+		
+		pre, code, tt {
+			font-size: 12px;
+			font-family: Consolas, "Liberation Mono", Courier, monospace;
+		}
+		
+		code, tt {
+			margin: 0 0;
+			padding: 0 0;
+			white-space: pre;
+			border: 1px solid #eaeaea;
+			background-color: #f9f9f9;
+			border-radius: 3px;
+		}
+		
+		pre>code {
+			margin: 0;
+			padding: 0;
+			white-space: pre;
+			border: none;
+			background: transparent;
+		}
+		
+		pre {
+			background-color: #fbfae9;
+			border: 1px solid #ccc;
+			font-size: 13px;
+			line-height: 19px;
+			overflow: auto;
+			padding: 6px 10px;
+			border-radius: 3px;
+		}
+		
+		pre code, pre tt {
+			background-color: transparent;
+			border: none;
+		}
+		
+		kbd {
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			background-color: #DDDDDD;
+			background-image: linear-gradient(#F1F1F1, #DDDDDD);
+			background-repeat: repeat-x;
+			border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+			border-image: none;
+			border-radius: 2px 2px 2px 2px;
+			border-style: solid;
+			border-width: 1px;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			line-height: 10px;
+			padding: 1px 4px;
+		}
+		
+		/* QUOTES
+		=============================================================================*/
+		
+		blockquote {
+			border-left: 4px solid #DDD;
+			padding: 0 15px;
+			color: #777;
+		}
+		
+		blockquote>:first-child {
+			margin-top: 0;
+		}
+		
+		blockquote>:last-child {
+			margin-bottom: 0;
+		}
+		
+		/* HORIZONTAL RULES
+		=============================================================================*/
+		
+		hr {
+			clear: both;
+			margin: 15px 0;
+			height: 0;
+			overflow: hidden;
+			border: none;
+			background: transparent;
+			border-bottom: 4px solid #ddd;
+			padding: 0;
+		}
+		
+		/* TABLES
+		=============================================================================*/
+		
+		table th {
+			font-weight: bold;
+		}
+		
+		table th, table td {
+			border: 1px solid #ccc;
+			padding: 6px 13px;
+		}
+		
+		table tr {
+			border-top: 1px solid #ccc;
+			background-color: #fff;
+		}
+		
+		table tr:nth-child(2n) {
+			background-color: #f8f8f8;
+		}
+		
+		/* IMAGES
+		=============================================================================*/
+		
+		img {
+			max-width: 100%
+		}
+	</style>
+</head>
+<body>
+<h1>Markdown语法笔记2</h1>
+<blockquote>
+	<p>尹玉慧</p>
+</blockquote>
+<p><br>
+	本文将介绍如何设置标题居中、中文段首缩进两个汉字及分割线等。</p>
+<h2>一、标题居中</h2>
+<pre><code>&lt;h2 align = &quot;center&quot;&gt;我是居中的标题&lt;/h2&gt;
+</code></pre>
+
+<p>效果：</p>
+<h2 align = "center">我是居中的标题</h2>
+<p><br></p>
+<h2>二、中文段首缩进</h2>
+<h3>方法1</h3>
+<pre><code>&amp;emsp;&amp;emsp;我是段首文字。     //一个&amp;emsp;占据一个汉字宽度
+
+&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;我是段首文字。        //一个&amp;ensp;占据半个汉字宽度
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我是段首文字。        //一个&amp;nbsp;占据1/4个汉字宽度
+</code></pre>
+
+<p>效果</p>
+<p>&emsp;&emsp;我是段首文字。</p>
+<h3>方法2</h3>
+<pre><code>中文状态下“shift+空格”，将半角转换成全角，这样就能跟word中打字一样方便，直接按两下空格键就好。
+</code></pre>
+
+<p><br></p>
+<h2>三、分割线</h2>
+<pre><code>------      //三个及以上减号就可以了，注意不能分隔文字，分割线上的文字会被当成二级标题
+以上是分割线
+</code></pre>
+
+<hr />
+<p>以上是分割线
+	<br><br></p>
+<h2>四、待续....</h2>
+<br>
+
+<p>END~~~≥ω≤</p>
+<p><br></p>
+<p>原文来自<a href="http://yinyuhui21.com/blog/Markdown/Markdown语法笔记2.html">尹玉慧的Blog</a></p>
+<p><a href="http://yinyuhui21.com">返回首页</a>　　　　<a href="../Markdown.html">返回文章列表</a></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
